@@ -18,3 +18,9 @@ resource "aws_security_group" "my_sg" {
   }
 }
 
+
+
+output "security_go_id"{
+  value = aws_security_group.my_sg.id
+}
+
