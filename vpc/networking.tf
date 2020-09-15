@@ -14,6 +14,19 @@ resource "aws_subnet" "main_subnet" {
   }
 }
 
+resource "aws_internet_gateway" "main_gw" {
+  vpc_id = "${var.vpc_id}"
+
+  tags = {
+    Name = "main_igw"
+  }
+}
+
+output "IGW_id"{
+value = aws_internet_gateway.main_gw.id
+}
+
+
 output "vpc_id" {
   value = aws_vpc.main_vpc.id
 }
