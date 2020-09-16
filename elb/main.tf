@@ -36,6 +36,8 @@ resource "aws_elb" "classic_elb" {
   connection_draining         = var.connection_draining
   connection_draining_timeout = var.connection_draining_timeout
 
+
+
   tags = {
     Name = "classic_elb"
   }
