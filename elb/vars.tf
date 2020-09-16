@@ -33,3 +33,7 @@ variable "connection_draining_timeout" {
   default     = 300
 }
 
+variable "instance_id" {}
+
+variable "vpc_id" {}
+

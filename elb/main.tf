@@ -2,6 +2,10 @@
 resource "aws_elb" "classic_elb" {
   name               = var.name
   subnets = var.subnet_id
+  instances       = var.instance_id
+  security_groups = [
+    aws_security_group.my-alb-sg.id
+  ]
 
 
 
